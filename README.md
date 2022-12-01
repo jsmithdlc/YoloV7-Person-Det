@@ -1,2 +1,3 @@
-# yolov7
-Person detection generation from images, for use in downstream top-down pose detection algorithms
+# YoloV7 Person Detector
+
+Person detection from images, meant for using as person localizations in downstream top-down pose detection systems. Generated bounding boxes are in COCO format.
