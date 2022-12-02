@@ -6,3 +6,4 @@ Person detection from images, meant for using as person localizations in downstr
 
 Go inside the [yolov7](yolov7) repository and setup the corresponding environment using Docker. The shared data folder should be pointed towards this repo's [data directory](data).
 
+Takes around 30 ms to detect persons in each image
