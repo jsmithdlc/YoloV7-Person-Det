@@ -8,12 +8,14 @@ def __load_ann_file(ann_path):
     return data
 
 
-def load_img_info(ann_path, split):
+def load_img_info(ann_path, split, rm_extension=False):
     anns = __load_ann_file(ann_path)
     df = pd.DataFrame(anns["images"])
     df["split"] = split
     df = df.rename(columns={"id": "image_id"})
     df["file_name"] = df["file_name"]
+    if rm_extension:
+        df["file_name"] = df["file_name"].str.split(".").str[0]
     return df[["file_name", "height", "width", "image_id", "split"]]
 
 
